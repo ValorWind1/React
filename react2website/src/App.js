@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import Footer from './Footer';
+import Header from './Header';
+import MainContent from './MainContent';
  import './App.css';
 
 
@@ -7,17 +10,9 @@ class App extends Component {
   render(){
     return (
       <div>
-        <nav>
-          <h1>Hello There</h1>
-          <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-          </ul>
-          </nav>
-          <main>
-            <p>This is where most of my content will go .... </p>
-          </main>
+        <Header />
+        <MainContent />
+        <Footer />
       </div>
 
   );
