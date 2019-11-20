@@ -1,0 +1,9 @@
+.contacts {
+        margin: 10;
+        background-color: beige;
+}
+
+.contact-card {
+    max-width: 50%;
+    height:auto;
+}

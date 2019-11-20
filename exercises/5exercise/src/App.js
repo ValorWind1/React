@@ -4,9 +4,12 @@ import CheckBoxes from './components/CheckBoxes';
 
 function App (){
   return (
-
-    <CheckBoxes />
-
+    <div >
+      <CheckBoxes />
+      <CheckBoxes />
+      <CheckBoxes />
+      <CheckBoxes />
+    </div>
 
   );
 }

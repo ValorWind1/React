@@ -2,14 +2,9 @@ import React from 'react';
 
 function CheckBoxes (){
     return (
-        <div>
+        <div className="body1">
             <input type="checkbox" />
-            <p>Thing 1 </p>
-            <input type="checkbox" />
-            <p>Thing 2 </p>
-            <input type="checkbox" />
-            <p>Thing 3 </p>
-            
+            <p style={{fontSize:25}}>Text here !  </p>
         </div>
 
     );
