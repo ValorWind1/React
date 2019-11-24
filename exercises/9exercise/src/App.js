@@ -20,18 +20,10 @@ function App (){
   })
 
 
-
   return(
     <div>
 
       {jokeComponents}
-
-
-
-
-
-
-
 
 
       {/* <Joke 
