@@ -12,11 +12,32 @@ class App extends React.Component {
           todos: todosData    // this was an empty array todos : [] now it contains our todo Data 
           
       }
+      this.handleChange = this.handleChange.bind(this);
+
+  }
+
+  handleChange(id) {
+    this.setState((i)=> {
+      const updatedTodos = i.todos.map(todo => {
+        if ( todo.id === id) {
+          todo.completed = !todo.completed
+        }
+        return todo
+      })
+      return {
+        todos: updatedTodos
+      }
+    })
+    console.log("Changed", id)
+
+
   }
 
   render (){
 
-    const todosss =  this.state.todos.map( i => <TodosItem key={i.id} i={i} />);
+    const todosss =  this.state.todos.map( i => <TodosItem key={i.id} i={i} 
+      handleChange ={this.handleChange}
+    />);
 
       return (
         <div className="todo-list">
