@@ -10,7 +10,9 @@ constructor(){
   }
   this.componentDidMount = this.componentDidMount.bind(this)
 }
-  componentDidMount(){
+  
+
+componentDidMount(){
     setTimeout(() => {
       this.setState({
         isLoading : false

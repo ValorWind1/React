@@ -1,4 +1,4 @@
-const todosData = [
+const data = [
 
     {
         id : 1,
@@ -31,4 +31,4 @@ const todosData = [
 
 ]
 
-export default todosData;
+export default data;
