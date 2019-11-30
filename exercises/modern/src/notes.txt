@@ -1,0 +1,62 @@
+JavaScript Library . Used for Uis made by Facebook .  Its refer as a framework(behaves as a framework). 
+Why use it ? Makes front end javascript much easier , independent components with their own state, interactive UIs, Virtual DOM , JSX = enable us to use JavaScript in our markup . 
+
+
+React State = component can have state = is an object that determines how component renders and behaves . 
+		-We could also have 'Application level" state by using a sate manager. = data that u want to share between multiple components . We have context API , Redux. 
+		
+
+
+Class component = extends the components class that have a state . , render ( ) , and returns ( ) . 
+
+
+Package.json = info on our app , dependencies , packages , etc … 
+	React : library itself 
+	React-dom : loading components in the browser 
+	React-scripts : dev-server , being able to compiler , being able to run tests . 
+
+
+REACT =single page application framework , the div root = is the output of everything . 
+	ROOT component is generated in the src folder , index.js 
+	Index.jshas an app components that comes from the app.js file 
+	Render ( ) = is the lifecycle method , only that is required needed to render the components in the browser . 
+	Component div mount http request life cycle method 
+
+
+How to create project =   npx create-react-app .    ( the dot means generate it in this current folder) 
+How to start server = npm start
+Create component = visual studio extension = rce
+Cerate a function component = rcf 
+
+		
+./    =  MEANS ON THE CURRENT DIRECTORY create-react-app .
+
+
+
+PROPS = makes it very reusable , and very useful . Reusable components . That can change according depending on the different properties. , props are immutable. 
+
+Conditionally rendering = 
+High order methods, arrow methods ,  
+
+Flux = 
+React-Hooks = 
+Virtual dom vs actual dom
+		
+		
+Classed based components  = allows us to import state ,and  lifecycle methods
+		
+		
+State = is simply the data that a components maintains like change its value/data . State needs to be in a class based component. Changing the state will change how things are display in changing state. 
+
+Event handling = allowing the user to interact with the page and do something specific after an event happens such an clicking on a button 
+
+Lifecycle methods = 
+
+
+Conditional rendering =going to load something on the screen if a condition is true . \
+
+Forms = constantly keep track of all the info : keeping track every key struck , with its lates update 
+Depending on what the user is currently typing 
+
+
+Container/component architecture = separation of concerns Component UI side , and in the Form container we put all of our business logic of the form
