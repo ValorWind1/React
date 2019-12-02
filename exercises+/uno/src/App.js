@@ -11,6 +11,7 @@ import todoData from './data/todo'
 import ClassEx from './ClassEx'
 import ExState from './ExState'
 import StateP from './StateP'
+import ChanginState from './ChanginState'
 
 function App (){
     const duty1 = "packed the bags"
@@ -97,6 +98,12 @@ function App (){
 
 
       <StateP />
+
+      {
+        ////////
+      }
+
+      <ChanginState />
 
     </div>
 

@@ -2,7 +2,7 @@ import React from 'react'
 import todoData from './data/todo'
 import Component1 from './Component1'
 
-
+ 
 class App extends React.Component{
   constructor(){
     super()
