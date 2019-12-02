@@ -14,6 +14,8 @@ import StateP from './StateP'
 import ChanginState from './ChanginState'
 import Phase6 from './Phase6'
 import ConditialRender from './ConditinalRender'
+import ConditialRend2 from './ConditionalRend2'
+import CondiPrc from './CondiPrc'
 
 function App (){
     const duty1 = "packed the bags"
@@ -125,6 +127,20 @@ function App (){
     </hr>
 
     <ConditialRender />
+
+
+    {
+      //////
+    }
+
+    <ConditialRend2 />
+
+    {
+
+      ////////
+    }
+
+    <CondiPrc />
 
     </div>
 
