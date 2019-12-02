@@ -5,8 +5,11 @@ import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 import Joke from './components/Joke'
 import data from './data/products'
-import Products from './components/Product'
 import Product from './components/Product'
+import Todoo from './components/Todoo'
+import todoData from './data/todo'
+import ClassEx from './ClassEx'
+import ExState from './ExState'
 
 function App (){
     const duty1 = "packed the bags"
@@ -20,7 +23,13 @@ function App (){
     //   <Products  key={i.id} name={i.name} price={i.price} description={i.description} />
     // )
 
+    const hacer = todoData.map((i) => 
+      <Todoo key={i.id} hacer={i}  />
+    )
+
     const info2 = data.map ( (i) => <Product key={i.id} data2={i}/>)
+
+    
 
   return (
     
@@ -70,6 +79,20 @@ function App (){
       {
         ////////////
       }
+
+      {hacer}
+
+      {
+        //////////
+      }
+
+      <ClassEx/>
+
+      {
+
+        ///////
+      }
+      <ExState /> 
 
     </div>
 
