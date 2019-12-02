@@ -20,6 +20,7 @@ class ChanginState extends React.Component {
             }
             
     })
+    
 }
     render (){
         return (

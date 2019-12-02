@@ -12,6 +12,8 @@ import ClassEx from './ClassEx'
 import ExState from './ExState'
 import StateP from './StateP'
 import ChanginState from './ChanginState'
+import Phase6 from './Phase6'
+import ConditialRender from './ConditinalRender'
 
 function App (){
     const duty1 = "packed the bags"
@@ -104,6 +106,25 @@ function App (){
       }
 
       <ChanginState />
+
+
+      {
+        //////
+      }
+      
+      <hr></hr>
+
+      <Phase6 />
+
+      {
+
+        ///////
+      }
+
+    <hr>
+    </hr>
+
+    <ConditialRender />
 
     </div>
 
