@@ -12,7 +12,7 @@ function Component1 (props){
 
         <div>
 
-            <input type = "checkbox" checked = {props.tooo.completed} onChange = {handleChange} />
+            <input type = "checkbox" checked = {props.tooo.completed} onChange = {(event) =>props.handleChange(props.tooo.id)} />
             <h4>{props.tooo.text}</h4>
             <hr></hr>
             
