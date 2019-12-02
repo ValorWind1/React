@@ -10,6 +10,7 @@ import Todoo from './components/Todoo'
 import todoData from './data/todo'
 import ClassEx from './ClassEx'
 import ExState from './ExState'
+import StateP from './StateP'
 
 function App (){
     const duty1 = "packed the bags"
@@ -93,6 +94,9 @@ function App (){
         ///////
       }
       <ExState /> 
+
+
+      <StateP />
 
     </div>
 
