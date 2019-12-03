@@ -16,6 +16,7 @@ import Phase6 from './Phase6'
 import ConditialRender from './ConditinalRender'
 import ConditialRend2 from './ConditionalRend2'
 import CondiPrc from './CondiPrc'
+import FormsPrc from './FormsPrc'
 
 function App (){
     const duty1 = "packed the bags"
@@ -123,6 +124,12 @@ function App (){
         ///////
       }
 
+      {
+
+        //////
+      }
+      
+
     <hr>
     </hr>
 
@@ -139,8 +146,19 @@ function App (){
 
       ////////
     }
+    <hr></hr>
 
     <CondiPrc />
+
+    {
+      ///////
+    }
+
+      <hr></hr>
+    <FormsPrc />
+
+
+    
 
     </div>
 
