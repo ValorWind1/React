@@ -1,0 +1,44 @@
+/posts?page=1  GET
+/posts post
+/posts/{id} PUT 
+/posts/{id} DELETE
+/posts?search=term&page=1
+
+---------------------------------
+/tags/tagname/posts
+/tags/tagname(always inclide posts in the tag representation)
+/tags/tagname?expand=true
+
+/posts?tag=A&tag=B
+
+patch/posts/1
+
+----------------------------------
+get/posts/1/comments 
+
+posts/1/comments 
+
+posts?comments=1  
+get/post/1/commnets/{id} / 12
+
+put/posts/1/comment/12
+delete/posts/1/tags/old-tags
+
+----------------------------------
+
+get/author 
+
+post/author/{id}
+
+get/author/{4}
+
+put/author/{}
+
+delete/author/{id}
+
+get/author/1/post
+
+post/author/1/post
+
+
+
