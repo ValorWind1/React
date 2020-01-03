@@ -1,0 +1,28 @@
+JS library for building UI. 
+ReactDom.render method allows us to render a js function as a component to the real DOM . 
+
+why use react ? because UI state becomes difficult to handle with vanilla js. (So we can focus on business logic)
+
+routing - Single page aplicationgs : rhandle different URLs and render different pages , even if we only have one html page . by parsing the url with js and re render part of the DOM that need to be re-rendered to display the new page
+
+redux - Third party library . 
+
+
+js basics : 
+
+let = variable values, const = constant values
+
+Classes = made from properties + methods properties = variables , methods = functions 
+
+
+state = State can be changed and if it changes
+and that's the special thing about it and it only works on that state property, if it changes, it will
+lead React to re-render our DOM or to update the DOM I should say.
+So if we change the name of Max here for example, this will lead to this being re-rendered.
+
+Update Dom = state or props 
+
+using hooks to manage state , got to manually makes sure to include all old state data 
+
+
+use inline style when we want to scope to a style to a single element 
