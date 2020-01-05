@@ -1,12 +1,17 @@
 import React from "react";
-import Person from "./Person/Person";
+
 import "./App.css";
-import ValidationComponent from "./Components/ValidationComponent";
-import CharComponent from "./Components/CharComponent";
+import ValidationComponent from "../Components/ValidationComponent";
+import CharComponent from "../Components/CharComponent";
+import ErrorBoundary from '../Components/ErrorBoundary'
+import Persons from '../Components/Persons/Persons'
+import Cockpit from "../Components/Cockpit/Cockpit";
+
 
 class App extends React.Component {
   constructor(props) {
     super(props);
+
     this.state = {
       people: [
         { id: '1', name: "Max", age: 27 },
@@ -18,6 +23,17 @@ class App extends React.Component {
       defaulttext: ""
     };
   }
+
+  static getDerivedStateFromProps(props,state) {
+    console.log('App.js , getderivedstatfrompops', props)
+    return state ; 
+  }
+
+  // componentDidMount(){
+  //   console.log('app.js componentdidmount')
+  // }
+
+
 
   deletePersonHandler = (pindex) => {
     // const pp = this.state.people.slice();
@@ -72,20 +88,12 @@ class App extends React.Component {
 
   
   render() {
+    console.log('App.js render')
 
     let charList = this.state.defaulttext.split('').map((ch , index) => {
       return <CharComponent character={ch} key={index} deleteit={() => this.deleteChar(index)} />;
     });
 
-
-    const style = {
-      backgroundColor: "white",
-      font: "inherit",
-      border: "1px solid blue",
-      padding: "8px",
-      cursor: "pointer",
-      
-    };
 
     let persons = null ; 
 
@@ -93,33 +101,12 @@ class App extends React.Component {
       persons = (
 
         <div>
-          {this.state.people.map( (i, index) => {
-              return <Person
-              clikingboi = {() => this.deletePersonHandler(index)} 
-              name={i.name} 
-              age={i.age}
-              key={i.id} 
-              changed={(event) => this.changedHandler(event , i.id)}
-              />
-          })}
-            {/* <Person
-              name={this.state.people[0].name}
-              age={this.state.people[0].age}
-            />
-            <Person
-              clikingboi={this.switchNameHandler.bind(this, "Max!")}
-              changed={this.changedHandler}
-              name={this.state.people[1].name}
-              age={this.state.people[1].age}
-            >
-              {" "}
-              My Hobbies : Flying{" "}
-            </Person>
-            <Person
-              name={this.state.people[2].name}
-              age={this.state.people[2].age}
-            /> */}
-          </div>
+          <Persons 
+          people={this.state.people}
+          clicked={this.deletePersonHandler}
+          changed={this.changedHandler}
+          />
+        </div>
 
       );
     }
@@ -127,15 +114,8 @@ class App extends React.Component {
 
     return (
       <div className="App">
-        <h1>Hello World !</h1>
-        <button
-          style={style}
-          // onClick={() => this.switchNameHandler("Maximilian!$")}
-          onClick={this.togglePersonsHandler}
-        >
-          Switch Name
-        </button>
-
+       <Cockpit toggle = {this.togglePersonsHandler} title={this.props.appTitle}/>
+        
         {persons}  
 
         <input type="text" onChange={this.changeLength} value={this.state.defaulttext}/>

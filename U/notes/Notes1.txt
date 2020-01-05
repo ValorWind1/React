@@ -26,3 +26,21 @@ using hooks to manage state , got to manually makes sure to include all old stat
 
 
 use inline style when we want to scope to a style to a single element 
+
+
+life-cycle events :
+
+component creation lifecycle - CREATION : FIRST the constructor(props) will execute ,
+SECOND getderivedStateFromProps(props, state) will execute (sync) , Dont HTTP requests ,
+THIRD render method , returns JSX code , then it will render Child Components , 
+FOURTH coponentDidMount WE make HTTP REQUEST HERE , DONT UPDATE STATE (trigger re-render), 
+
+
+component Update lifecycle - UPDATE : FIRST getderivedStateFromProps(props,state) , 
+SECOND shouldComponentUpdate(nextProps,nextState) allows us to cancel the updating process , 
+THIRD render method is called , constructs virtual DOM , - update all Child Component props 
+FOURTH getSnapshotBeforeUpdate(prevProps , prevState) , used = last minute DOM ops, 
+FIFTH componentDidUpdate() WE HANDLE HTTP REQUEST HERE , 
+
+
+
