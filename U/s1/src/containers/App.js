@@ -20,7 +20,8 @@ class App extends React.Component {
       ],
       otherState: "other value",
       showPersons: false,
-      defaulttext: ""
+      defaulttext: "",
+      showCockpit: true
     };
   }
 
@@ -29,10 +30,19 @@ class App extends React.Component {
     return state ; 
   }
 
-  // componentDidMount(){
-  //   console.log('app.js componentdidmount')
-  // }
+  componentDidMount(){
+    console.log('app.js componentdidmount')
+  }
 
+  shouldComponentUpdate(nextProps , nextState) {
+    console.log("app.js shouldcomponentUpdate")
+    // return false; // preventing update 
+    return true;
+  }
+
+  componentDidUpdate(){
+    console.log('app.js componentdidupdate')
+  }
 
 
   deletePersonHandler = (pindex) => {
@@ -114,7 +124,8 @@ class App extends React.Component {
 
     return (
       <div className="App">
-       <Cockpit toggle = {this.togglePersonsHandler} title={this.props.appTitle}/>
+        <button onClick={() => {this.setState({showCockpit : false})}}>Remove Cockpit</button>
+       {this.state.showCockpit ? (<Cockpit toggle = {this.togglePersonsHandler} title={this.props.appTitle}/> ) : null}
         
         {persons}  
 
