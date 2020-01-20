@@ -42,5 +42,5 @@ THIRD render method is called , constructs virtual DOM , - update all Child Comp
 FOURTH getSnapshotBeforeUpdate(prevProps , prevState) , used = last minute DOM ops, 
 FIFTH componentDidUpdate() WE HANDLE HTTP REQUEST HERE , 
 
-
+function = life cycle event  = Useeffect = it will run  after render 
 

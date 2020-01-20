@@ -1,11 +1,12 @@
 import React from "react";
-
+import AuthContext from '../context/auth-context'
 import "./App.css";
 import ValidationComponent from "../Components/ValidationComponent";
 import CharComponent from "../Components/CharComponent";
 import ErrorBoundary from '../Components/ErrorBoundary'
 import Persons from '../Components/Persons/Persons'
 import Cockpit from "../Components/Cockpit/Cockpit";
+import WithClass from '../hoc/WithClass'
 
 
 class App extends React.Component {
@@ -21,7 +22,9 @@ class App extends React.Component {
       otherState: "other value",
       showPersons: false,
       defaulttext: "",
-      showCockpit: true
+      showCockpit: true,
+      counter : 0 ,
+      authenticated : false
     };
   }
 
@@ -70,8 +73,11 @@ class App extends React.Component {
     const pepl = [...this.state.people];
     pepl[personIndex] = pep
 
-    this.setState({
-      people:  pepl
+    this.setState((prevState , props) => {
+      return {
+      people:  pepl,
+      counter: prevState.counter + 1 
+      }
     });
   };
 
@@ -96,6 +102,10 @@ class App extends React.Component {
     
   }
 
+  loginHandler = () => {
+    this.setState({authenticated : true})
+  }
+
   
   render() {
     console.log('App.js render')
@@ -115,6 +125,7 @@ class App extends React.Component {
           people={this.state.people}
           clicked={this.deletePersonHandler}
           changed={this.changedHandler}
+          isAuthenticated = {this.state.authenticated}
           />
         </div>
 
@@ -123,21 +134,27 @@ class App extends React.Component {
 
 
     return (
+      
       <div className="App">
         <button onClick={() => {this.setState({showCockpit : false})}}>Remove Cockpit</button>
-       {this.state.showCockpit ? (<Cockpit toggle = {this.togglePersonsHandler} title={this.props.appTitle}/> ) : null}
-        
-        {persons}  
 
+        <AuthContext.Provider value ={{authenticated : this.state.authenticated , login : this.loginHandler}}> 
+        {this.state.showCockpit ? 
+        (<Cockpit toggle = {this.togglePersonsHandler}  title={this.props.appTitle}/> ) : null}
+        <p>{this.state.counter}</p>
+        {persons}
+        </AuthContext.Provider>
+        
         <input type="text" onChange={this.changeLength} value={this.state.defaulttext}/>
         <p>{this.state.defaulttext}</p>
         {/* <h3>Length of paragraph is:{this.state.defaulttext.length}</h3>  */}
         <ValidationComponent length1 = {this.state.defaulttext.length} 
         />
         {charList}
-        
-
+         
       </div>
+    
+
     );
   }
 }

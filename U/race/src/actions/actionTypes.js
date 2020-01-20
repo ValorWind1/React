@@ -1,0 +1,7 @@
+export const START = "START"
+export const STOP = "STOP"
+export const RESET = "RESET"
+export const TICK_V1 = "TICK_V1"
+export const TICK_V2= "TICK_V2"
+export const V1_WIN = "V1_WIN"
+export const V2_WIN = "V2_WIN"
