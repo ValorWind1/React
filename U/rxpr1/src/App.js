@@ -1,6 +1,6 @@
 import React from 'react';
 import {useSelector , useDispatch} from 'react-redux';
-import {increment , decrement , usernamegen, deleteusernamegen, generateDate } from './actions';
+import {increment , decrement , usernamegen, deleteusernamegen, generateDate , apicalling } from './actions';
 
  
 function App() {
@@ -9,6 +9,7 @@ function App() {
   const dispatch = useDispatch();
   const username = useSelector(state => state.username)
   const date = useSelector(state => state.date1)
+  const api1 = useSelector(state => state.api1)
 
  let style1 = {
     color : "red"
@@ -53,8 +54,12 @@ function App() {
       <h3></h3>
       <hr />
       <h1>Using Saga to call APIs</h1>
-      <h2 style={style4} > Pokemon APIs</h2>
       <h2 style = {style5}>Star Wars APIs</h2>
+      <h3>List of Character from Star Wars : {api1}</h3>
+      <button onClick={() => dispatch(apicalling())} >Generate Star Wars Characters</button>
+      <h2 style={style4} > Pokemon APIs</h2>
+
+      
 
 
 

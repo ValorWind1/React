@@ -28,3 +28,8 @@ export const generateDate = () => {
     }
 }
 
+export const apicalling = () => {
+    return {
+        type : 'API_CALL',
+    }
+}
