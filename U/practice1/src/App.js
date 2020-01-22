@@ -12,6 +12,7 @@ import todoDataList from './TodoList'
 import Pokemon from './components/Pokemon'
 import Counter from './components/Counter'
 
+
 class App extends React.Component {
 
   constructor() {
@@ -98,6 +99,8 @@ class App extends React.Component {
       <Pokemon />
       <hr />
       <Counter />
+      <hr />
+     
       <hr />
       <br />
       <br /> 

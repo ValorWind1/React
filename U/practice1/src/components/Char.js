@@ -12,8 +12,9 @@ const Char = (props) => {
 
     return (
         <div style={style7}>
-            <h3>Char Components</h3>
-                <h4 onClick={props.remove}>{props.char} </h4>
+            
+             <h3>Char Components</h3>
+             <h4 onClick={props.remove}>{props.char} </h4>
            
         </div>
     )
